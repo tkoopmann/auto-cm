@@ -2,6 +2,10 @@ import zipfile
 import subprocess
 import requests
 from pathlib import Path
+from dotenv import dotenv_values
+
+
+FDB_USER = ""
 
 
 def get_new_probable_prime(amt, min_digits, offset):
@@ -23,7 +27,7 @@ def prove_primality(batch_size, min_digits, offset):
             "cert": ("results.zip", f, "application/zip")
         }
         cookies = {
-            "fdbuser": "76c3e48414df81bfb14c0793e21ddca8"
+            "fdbuser": FDB_USER
         }
         response = requests.post(
             "https://factordb.com/uploadcert.php",
@@ -39,14 +43,18 @@ def prove_primality(batch_size, min_digits, offset):
 
 
 def main():
-    total_amount = 100 # Total amount of probable primes to be checked
-    batch_size = 10 # Amount of probable primes to be checked per request to factordb
-    min_digits = 500 # The minimum number of digits in the probable prime to be considered
+    total_amount = 5 # Total amount of probable primes to be checked
+    batch_size = 5 # Amount of probable primes to be checked per request to factordb
+    min_digits = 300 # The minimum number of digits in the probable prime to be considered
     offset = 0 # Increase this if you are worried that small numbers could be done by someone else
     number_of_batches = total_amount // batch_size # Number of requests to be made
 
     for i in range(number_of_batches):
-        prove_primality(batch_size=batch_size, min_digits=min_digits, offset=offset)
+        prove_primality(
+            batch_size=batch_size,
+            min_digits=min_digits,
+            offset=offset
+        )
 
 
 if __name__ == "__main__":
