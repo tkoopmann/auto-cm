@@ -2,7 +2,6 @@ import zipfile
 import subprocess
 import requests
 from pathlib import Path
-from dotenv import dotenv_values
 
 
 FDB_USER = ""
