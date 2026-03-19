@@ -3,12 +3,11 @@ Automatically checks PRP numbers from factordb using CM
 
 ## 🚀 Installation
 1. Clone the repository
-git clone https://github.com/tkoopmann/auto-cm.git
-cd auto-cm
+`git clone https://github.com/tkoopmann/auto-cm.git && cd auto-cm`
 2. Make the installer executable
-chmod +x install.sh
+`chmod +x install.sh`
 3. Run the installer
-./install.sh
+`./install.sh`
 
 The installer will:
 
@@ -34,8 +33,8 @@ Internet connection
 
 After installation, you can run:
 
-python3 auto-cm.py
+`python3 auto-cm.py`
 
 📄 License
 
-See LICENSE file.
+MIT License. See LICENSE file.
