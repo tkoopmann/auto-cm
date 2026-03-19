@@ -1,7 +1,7 @@
-📦 auto-cm
+# 📦 auto-cm
 Automatically checks PRP numbers from factordb using CM
 
-🚀 Installation
+## 🚀 Installation
 1. Clone the repository
 git clone https://github.com/tkoopmann/auto-cm.git
 cd auto-cm
@@ -18,7 +18,7 @@ Set up the environment
 
 ⚠️ You may be prompted for sudo depending on your system configuration.
 
-📋 Requirements
+## 📋 Requirements
 
 Make sure the following are available before installation:
 
@@ -30,7 +30,7 @@ Bash shell
 
 Internet connection
 
-🧪 Usage
+## 🧪 Usage
 
 After installation, you can run:
 
